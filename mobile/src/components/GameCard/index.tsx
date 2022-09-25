@@ -9,7 +9,7 @@ export interface GameCardProps {
     title: string;
     _count: {
         ads: number;
-    }
+    };
     bannerUrl: string;
 }
 
