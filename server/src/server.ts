@@ -53,6 +53,7 @@ app.post('/games/:id/ads', async (request, response) => {
       useVoiceChanel: body.useVoiceChanel,
     },
   })
+  console.log(ad);
 
   return response.status(201).json(ad);
 });

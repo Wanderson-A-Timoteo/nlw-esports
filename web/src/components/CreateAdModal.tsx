@@ -16,7 +16,7 @@ interface Game {
 export function CreateAdModal() {
   const [games, setGames] = useState<Game[]>([]);
   const [weekDays, setWeekDays] = useState<string[]>([]);
-  const [useVoiceChannel, setUseVoiceChannel] = useState(false);
+  const [useVoiceChanel, setUseVoiceChanel] = useState(false);
 
   useEffect(() => {
     axios('http://localhost:3333/games').then(response => {
@@ -42,7 +42,7 @@ export function CreateAdModal() {
         weekDays: weekDays.map(Number),
         hourStart: data.hourStart,
         hourEnd: data.hourEnd,
-        useVoiceChannel: data.useVoiceChannel,
+        useVoiceChanel: data.useVoiceChanel,
       });
 
       alert('Anúncio criado com sucesso!');
@@ -164,12 +164,12 @@ export function CreateAdModal() {
 
             <label className="mt-2 flex items-center gap-2 text-sm">
               <Checkbox.Root
-                checked={useVoiceChannel}
+                checked={useVoiceChanel}
                 onCheckedChange={(checked) => {
                   if (checked === true) {
-                    setUseVoiceChannel(true);
+                    setUseVoiceChanel(true);
                   } else {
-                    setUseVoiceChannel(false);
+                    setUseVoiceChanel(false);
                   }
                 }}
                 className="w-6 h-6 p-1 rounded bg-zinc-900"
